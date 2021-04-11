@@ -30,7 +30,7 @@ namespace Business.Concrete
 
             return new SuccessResult(Messages.ProductAdded);
 
-            return new Result(true);
+            
         }
 
         public IDataResult<List<Product>> GetAll()
