@@ -28,8 +28,10 @@ namespace Business.Concrete
             _productDal = productDal;
             _categoryService = categoryService;
         }
+
         [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
+
         public IResult Add(Product product)
         {
            var result = BusinessRules.Run(CheckIfProductNameExists(product.ProductName), 
